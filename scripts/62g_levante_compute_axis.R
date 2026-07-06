@@ -73,19 +73,35 @@ alpha_compute <- theta |>
          capability = "psi_self = exp(theta), model-only Rasch calibration")
 write_csv(alpha_compute, file.path(root, "processed_data", "levante_compute_alpha.csv"))
 
-p <- ggplot(theta |> filter(task != "mental-rotation", !floor_flag),
-            aes(flops, theta_self, color = task)) +
-  geom_point(size = 2) +
-  geom_smooth(method = "lm", se = FALSE, linewidth = 0.6) +
-  scale_x_log10() +
-  scale_color_brewer(palette = "Dark2") +
-  labs(x = "LLM pretraining compute, 6ND FLOPs (log scale)",
-       y = expression(paste("Self-calibrated ability ", theta, " = ln ", Psi)),
-       color = "Task",
-       title = "InternVL3.5: ability vs backbone training compute") +
-  theme_classic(base_size = 11)
+# Figure per ~/memory/rules/figure-style.md: small multiples ordered by alpha,
+# black on white (no color variable to encode), one corner stat per panel,
+# fixed y so the slope gradient is visible across panels, no on-canvas titles.
+task_labels <- c("vocab" = "Vocabulary", "egma-math" = "Arithmetic",
+                 "trog" = "Grammar (TROG)", "theory-of-mind" = "Theory of mind",
+                 "matrix-reasoning" = "Matrix reasoning")
+plot_df <- theta |>
+  filter(task != "mental-rotation", !floor_flag) |>
+  mutate(task_lab = factor(task_labels[task], levels = unname(task_labels)))
+ann <- alpha_compute |>
+  filter(axis == "training_FLOPs_6ND") |>
+  mutate(task_lab = factor(task_labels[task], levels = unname(task_labels)),
+         lab = sprintf("α = %.2f\nR² = %.2f", alpha, r2))
+p <- ggplot(plot_df, aes(flops, theta_self)) +
+  geom_smooth(method = "lm", se = TRUE, color = "black", linewidth = 0.5,
+              fill = "gray85") +
+  geom_point(size = 1.6, shape = 21, fill = "white", stroke = 0.7) +
+  geom_text(data = ann, aes(x = 1.1e23, y = Inf, label = lab),
+            hjust = 0, vjust = 1.15, size = 2.6, lineheight = 0.95) +
+  scale_x_log10(limits = c(1e23, 8.5e24), breaks = c(1e23, 1e24),
+                labels = expression(10^23, 10^24)) +
+  facet_wrap(~ task_lab, nrow = 1) +
+  labs(x = "Training compute (FLOPs)",
+       y = expression(paste("Ability ", theta, " (= ln ", Psi, ")"))) +
+  theme_classic(base_size = 12) +
+  theme(strip.background = element_blank(),
+        strip.text = element_text(face = "bold", size = 9.5))
 ggsave(file.path(root, "figures", "levante_compute_axis.png"), p,
-       width = 7.5, height = 4.5, dpi = 200, bg = "white")
+       width = 7.2, height = 2.3, dpi = 300, bg = "white")
 
 write_json(
   list(seed = SEED,
