@@ -1,0 +1,267 @@
+{
+  "seed": 42,
+  "validation": {
+    "alpha_bias": 0.005358,
+    "alpha_sd": 0.02586
+  },
+  "spec": {
+    "model": "JML Rasch: glm(cbind(k,n-k) ~ model + item), mean item easiness = 0",
+    "alpha": "slope of theta_self on ln(params_b), OLS",
+    "floor_acc_threshold": 0.35
+  },
+  "dropped": {
+    "trog": {
+      "models": 2,
+      "items": 0
+    },
+    "vocab": {
+      "models": 2,
+      "items": 0
+    },
+    "egma-math": {
+      "models": 2,
+      "items": 0
+    },
+    "matrix-reasoning": {
+      "models": 2,
+      "items": 0
+    },
+    "mental-rotation": {
+      "models": 2,
+      "items": 0
+    },
+    "theory-of-mind": {
+      "models": 2,
+      "items": 0
+    }
+  },
+  "alpha_self": [
+    {
+      "task": "egma-math",
+      "family": "gemma4",
+      "alpha_self": 1.130995,
+      "ci_lo": 1.051127,
+      "ci_hi": 1.210863,
+      "r2": 0.999969,
+      "n_models": 3,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "egma-math",
+      "family": "internvl35",
+      "alpha_self": 1.009094,
+      "ci_lo": 0.610348,
+      "ci_hi": 1.407841,
+      "r2": 0.925049,
+      "n_models": 6,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "egma-math",
+      "family": "qwen35",
+      "alpha_self": 0.554239,
+      "ci_lo": -0.913073,
+      "ci_hi": 2.021551,
+      "r2": 0.325086,
+      "n_models": 5,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "matrix-reasoning",
+      "family": "internvl35",
+      "alpha_self": 0.169248,
+      "ci_lo": -0.104515,
+      "ci_hi": 0.443012,
+      "r2": 0.563381,
+      "n_models": 5,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "theory-of-mind",
+      "family": "gemma4",
+      "alpha_self": 0.722916,
+      "ci_lo": 0.599827,
+      "ci_hi": 0.846006,
+      "r2": 0.99982,
+      "n_models": 3,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "theory-of-mind",
+      "family": "internvl35",
+      "alpha_self": 0.300428,
+      "ci_lo": -0.127547,
+      "ci_hi": 0.728404,
+      "r2": 0.487087,
+      "n_models": 6,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "theory-of-mind",
+      "family": "qwen35",
+      "alpha_self": 0.486803,
+      "ci_lo": 0.180054,
+      "ci_hi": 0.793553,
+      "r2": 0.894763,
+      "n_models": 5,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "theory-of-mind",
+      "family": "smolvlm2",
+      "alpha_self": -0.039521,
+      "ci_lo": -1.487868,
+      "ci_hi": 1.408826,
+      "r2": 0.10731,
+      "n_models": 3,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "trog",
+      "family": "internvl35",
+      "alpha_self": 0.695641,
+      "ci_lo": 0.582277,
+      "ci_hi": 0.809006,
+      "r2": 0.986407,
+      "n_models": 6,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "trog",
+      "family": "qwen35",
+      "alpha_self": 0.823112,
+      "ci_lo": -0.164281,
+      "ci_hi": 1.810505,
+      "r2": 0.865456,
+      "n_models": 4,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "vocab",
+      "family": "gemma4",
+      "alpha_self": 2.120234,
+      "ci_lo": -4.468863,
+      "ci_hi": 8.709332,
+      "r2": 0.943556,
+      "n_models": 3,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "vocab",
+      "family": "internvl35",
+      "alpha_self": 1.020964,
+      "ci_lo": 0.843956,
+      "ci_hi": 1.197973,
+      "r2": 0.984642,
+      "n_models": 6,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "vocab",
+      "family": "qwen35",
+      "alpha_self": 1.911255,
+      "ci_lo": 0.69426,
+      "ci_hi": 3.128249,
+      "r2": 0.892778,
+      "n_models": 5,
+      "headline": true,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "egma-math",
+      "family": "ALL (pooled)",
+      "alpha_self": 0.952421,
+      "ci_lo": 0.509887,
+      "ci_hi": 1.394955,
+      "r2": 0.603484,
+      "n_models": 16,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "matrix-reasoning",
+      "family": "ALL (pooled)",
+      "alpha_self": 0.205033,
+      "ci_lo": 0.001417,
+      "ci_hi": 0.408648,
+      "r2": 0.661486,
+      "n_models": 6,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "theory-of-mind",
+      "family": "ALL (pooled)",
+      "alpha_self": 0.408257,
+      "ci_lo": 0.266299,
+      "ci_hi": 0.550215,
+      "r2": 0.699073,
+      "n_models": 18,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "trog",
+      "family": "ALL (pooled)",
+      "alpha_self": 0.851688,
+      "ci_lo": 0.568574,
+      "ci_hi": 1.134802,
+      "r2": 0.817945,
+      "n_models": 12,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "vocab",
+      "family": "ALL (pooled)",
+      "alpha_self": 1.548032,
+      "ci_lo": 0.887626,
+      "ci_hi": 2.208438,
+      "r2": 0.6636,
+      "n_models": 15,
+      "headline": false,
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    }
+  ],
+  "scale_comparison": [
+    {
+      "task": "egma-math",
+      "n_items": 101,
+      "r": 0.307013,
+      "stretch": 0.566771,
+      "stretch_se": 0.176578
+    },
+    {
+      "task": "matrix-reasoning",
+      "n_items": 2,
+      "r": -1,
+      "stretch": -4.344717
+    },
+    {
+      "task": "trog",
+      "n_items": 89,
+      "r": 0.608213,
+      "stretch": 1.021799,
+      "stretch_se": 0.142971
+    },
+    {
+      "task": "vocab",
+      "n_items": 158,
+      "r": 0.359649,
+      "stretch": 0.891911,
+      "stretch_se": 0.185269
+    }
+  ]
+}

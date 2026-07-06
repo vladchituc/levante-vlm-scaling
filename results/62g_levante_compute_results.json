@@ -1,0 +1,122 @@
+{
+  "seed": 42,
+  "sources": {
+    "backbones": "InternVL3.5 report arXiv 2508.18265 Table 1",
+    "tokens": "Qwen3 report arXiv 2505.09388: 36T tokens, all sizes",
+    "flop_rule": "C = 6*N*D dense approximation"
+  },
+  "excluded": "vision-encoder + VLM-stage compute; qwen35/gemma4/smolvlm2 (unsourced token counts)",
+  "flops_range": [1.2959999999999998e+23, 6.9120000000000005e+24],
+  "alpha": [
+    {
+      "task": "egma-math",
+      "alpha": 0.922917,
+      "ci_lo": 0.546173,
+      "ci_hi": 1.29966,
+      "r2": 0.920415,
+      "n_models": 6,
+      "axis": "training_FLOPs_6ND",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "egma-math",
+      "alpha": 1.009094,
+      "ci_lo": 0.610348,
+      "ci_hi": 1.407841,
+      "r2": 0.925049,
+      "n_models": 6,
+      "axis": "nominal_params (62d headline)",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "matrix-reasoning",
+      "alpha": 0.165942,
+      "ci_lo": -0.117333,
+      "ci_hi": 0.449217,
+      "r2": 0.536717,
+      "n_models": 5,
+      "axis": "training_FLOPs_6ND",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "matrix-reasoning",
+      "alpha": 0.169248,
+      "ci_lo": -0.104515,
+      "ci_hi": 0.443012,
+      "r2": 0.563381,
+      "n_models": 5,
+      "axis": "nominal_params (62d headline)",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "theory-of-mind",
+      "alpha": 0.301607,
+      "ci_lo": -0.051819,
+      "ci_hi": 0.655033,
+      "r2": 0.583936,
+      "n_models": 6,
+      "axis": "training_FLOPs_6ND",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "theory-of-mind",
+      "alpha": 0.300428,
+      "ci_lo": -0.127547,
+      "ci_hi": 0.728404,
+      "r2": 0.487087,
+      "n_models": 6,
+      "axis": "nominal_params (62d headline)",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "trog",
+      "alpha": 0.632789,
+      "ci_lo": 0.480619,
+      "ci_hi": 0.784958,
+      "r2": 0.970867,
+      "n_models": 6,
+      "axis": "training_FLOPs_6ND",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "trog",
+      "alpha": 0.695641,
+      "ci_lo": 0.582277,
+      "ci_hi": 0.809006,
+      "r2": 0.986407,
+      "n_models": 6,
+      "axis": "nominal_params (62d headline)",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "vocab",
+      "alpha": 0.938912,
+      "ci_lo": 0.811413,
+      "ci_hi": 1.06641,
+      "r2": 0.990522,
+      "n_models": 6,
+      "axis": "training_FLOPs_6ND",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    },
+    {
+      "task": "vocab",
+      "alpha": 1.020964,
+      "ci_lo": 0.843956,
+      "ci_hi": 1.197973,
+      "r2": 0.984642,
+      "n_models": 6,
+      "axis": "nominal_params (62d headline)",
+      "family": "internvl35",
+      "capability": "psi_self = exp(theta), model-only Rasch calibration"
+    }
+  ]
+}

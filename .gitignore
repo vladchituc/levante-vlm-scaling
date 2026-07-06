@@ -1,0 +1,4 @@
+data/
+processed_data/
+.DS_Store
+*.part

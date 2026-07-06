@@ -1,0 +1,11 @@
+task,alpha,ci_lo,ci_hi,r2,n_models,axis,family,capability
+egma-math,0.9229166545906863,0.5461730577156596,1.299660251465713,0.9204148196379361,6,training_FLOPs_6ND,internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+egma-math,1.0090943125836564,0.6103476586635672,1.4078409665037457,0.9250490475916994,6,nominal_params (62d headline),internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+matrix-reasoning,0.16594207858462223,-0.11733255997378944,0.4492167171430339,0.536716765980506,5,training_FLOPs_6ND,internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+matrix-reasoning,0.16924827860235891,-0.10451501988985595,0.4430115770945738,0.5633806715116986,5,nominal_params (62d headline),internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+theory-of-mind,0.30160717737360776,-0.05181865950816644,0.655033014255382,0.583935907657688,6,training_FLOPs_6ND,internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+theory-of-mind,0.3004283087623405,-0.12754719409924387,0.7284038116239249,0.4870865645658556,6,nominal_params (62d headline),internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+trog,0.6327885932049541,0.48061928670930054,0.7849578997006076,0.9708674442517613,6,training_FLOPs_6ND,internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+trog,0.6956413430746156,0.5822765343928085,0.8090061517564227,0.9864067410718392,6,nominal_params (62d headline),internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+vocab,0.9389117183892001,0.8114131395973679,1.066410297181032,0.9905222075401454,6,training_FLOPs_6ND,internvl35,"psi_self = exp(theta), model-only Rasch calibration"
+vocab,1.0209643972015452,0.8439562892648309,1.1979725051382595,0.9846423263767005,6,nominal_params (62d headline),internvl35,"psi_self = exp(theta), model-only Rasch calibration"
